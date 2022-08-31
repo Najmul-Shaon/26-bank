@@ -6,7 +6,7 @@ document.getElementById('login').addEventListener('click', function () {
     const password = passwordField.value;
     console.log(password);
     if (email === 'abc@gmail.com' && password === 'abc') {
-        console.log("Valid");
+        window.location.href = 'bank.html';
     }
     else {
         console.log("invalid");
