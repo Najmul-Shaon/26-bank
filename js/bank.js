@@ -34,5 +34,14 @@ document.getElementById('withdrawn').addEventListener('click', function () {
     const newGrandTotalWithdraw = grandTotalWithdrawNumber + withdrawnAmountNumber;
     grandTotalWithdraw.innerText = newGrandTotalWithdraw;
 
+    // set balance section
+    const previousGrandTotalBalance = document.getElementById('grand-total-balance');
+    const previousGrandTotalBalanceString = previousGrandTotalBalance.innerText;
+    const previousGrandTotalBalanceNumber = parseFloat(previousGrandTotalBalanceString);
+    const newGrandTotalBalanceAfterWithdrawn = previousGrandTotalBalanceNumber - withdrawnAmountNumber;
+    previousGrandTotalBalance.innerText = newGrandTotalBalanceAfterWithdrawn;
+
+    // clear section 
+
     withdrawnAmount.value = '';
 })
