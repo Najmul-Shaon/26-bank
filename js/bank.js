@@ -23,3 +23,16 @@ document.getElementById('deposite').addEventListener('click', function () {
 })
 
 // withdrawn section 
+document.getElementById('withdrawn').addEventListener('click', function () {
+    const withdrawnAmount = document.getElementById('withdrawn-amount');
+    const withdrawnAmountString = withdrawnAmount.value;
+    const withdrawnAmountNumber = parseFloat(withdrawnAmountString);
+
+    const grandTotalWithdraw = document.getElementById('grand-total-withdeaw');
+    const grandTotalBalanceString = grandTotalWithdraw.innerText;
+    const grandTotalWithdrawNumber = parseFloat(grandTotalBalanceString);
+    const newGrandTotalWithdraw = grandTotalWithdrawNumber + withdrawnAmountNumber;
+    grandTotalWithdraw.innerText = newGrandTotalWithdraw;
+
+    withdrawnAmount.value = '';
+})
